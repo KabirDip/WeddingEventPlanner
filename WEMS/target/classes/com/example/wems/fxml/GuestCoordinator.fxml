@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<VBox spacing="12" xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.wems.controllers.GuestCoordinatorController">
+
+    <padding>
+        <Insets top="12" right="12" bottom="12" left="12"/>
+    </padding>
+
+    <Label text="Guest List" style="-fx-font-size:18px; -fx-font-weight:bold;" />
+
+    <TableView fx:id="guestTable" prefHeight="240">
+        <columns>
+            <TableColumn fx:id="nameColumn" text="Name" prefWidth="180">
+                <cellValueFactory>
+                    <PropertyValueFactory property="name" />
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="emailColumn" text="Email" prefWidth="250">
+                <cellValueFactory>
+                    <PropertyValueFactory property="email" />
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="phoneColumn" text="Phone" prefWidth="140">
+                <cellValueFactory>
+                    <PropertyValueFactory property="phone" />
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="statusColumn" text="Status" prefWidth="110">
+                <cellValueFactory>
+                    <PropertyValueFactory property="status" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+
+    <HBox spacing="12">
+        <VBox spacing="8">
+
+            <Label text="Upload CSV / Add Guest" />
+
+            <HBox spacing="6">
+                <TextField fx:id="nameField" promptText="Name" prefWidth="140"/>
+                <TextField fx:id="emailField" promptText="Email" prefWidth="180"/>
+                <TextField fx:id="phoneField" promptText="Phone" prefWidth="120"/>
+                <Button text="Add Guest" onAction="#handleAddGuest"/>
+            </HBox>
+
+            <HBox spacing="6">
+                <Button text="View Status" onAction="#handleViewStatus"/>
+            </HBox>
+
+        </VBox>
+
+        <VBox spacing="8">
+
+            <Label text="Invitation Message"/>
+
+            <TextArea fx:id="messageArea"
+                      promptText="Write invitation message..."
+                      prefRowCount="6" prefWidth="300"/>
+
+            <HBox spacing="8">
+                <Button text="Send Invitation" onAction="#handleSendInvitation"/>
+                <Label fx:id="sendResultLabel" text=""/>
+            </HBox>
+
+        </VBox>
+    </HBox>
+
+</VBox>
