@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.weddingeventmanagment.RefundRequestsController">
+
+    <top>
+        <Label text="Client Refund Requests"
+               style="-fx-font-size: 20px;">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+        </Label>
+    </top>
+
+    <center>
+        <TableView fx:id="refundTable" prefHeight="400" prefWidth="600">
+            <columns>
+                <TableColumn fx:id="colId" text="Request ID" prefWidth="120"/>
+                <TableColumn fx:id="colClient" text="Client Name" prefWidth="200"/>
+                <TableColumn fx:id="colAmount" text="Amount" prefWidth="150"/>
+                <TableColumn fx:id="colStatus" text="Status" prefWidth="150"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <HBox spacing="10">
+                <Button text="Verify Request" fx:id="btnVerify" />
+                <Button text="Approve" fx:id="btnApprove" />
+                <Button text="Reject" fx:id="btnReject" />
+            </HBox>
+
+            <Label text="Action Summary:" style="-fx-font-weight: bold;" />
+            <Label fx:id="summaryLabel" text="No request selected."/>
+        </VBox>
+    </bottom>
+
+</BorderPane>

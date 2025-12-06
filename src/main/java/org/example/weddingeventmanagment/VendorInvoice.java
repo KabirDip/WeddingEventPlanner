@@ -8,12 +8,18 @@ public class VendorInvoice {
     private final StringProperty vendorName;
     private final DoubleProperty amount;
     private final StringProperty status;
+    private String bankAccount;
 
     public VendorInvoice(int invoiceId, String vendorName, double amount, String status) {
         this.invoiceId = new SimpleIntegerProperty(invoiceId);
         this.vendorName = new SimpleStringProperty(vendorName);
         this.amount = new SimpleDoubleProperty(amount);
         this.status = new SimpleStringProperty(status);
+    }
+
+
+    public String getBankAccount() {
+        return bankAccount;
     }
 
     public int getInvoiceId() { return invoiceId.get(); }

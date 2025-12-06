@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.weddingeventmanagment.VendorDisbursementController">
+
+    <top>
+        <Label text="Vendor Payment Disbursement Panel"
+               style="-fx-font-size: 18; -fx-padding: 10;" />
+    </top>
+
+    <center>
+        <TableView fx:id="invoiceTable" prefHeight="300">
+            <columns>
+
+                <TableColumn fx:id="invoiceIdColumn" text="Invoice ID" prefWidth="120">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="invoiceId"/>
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn fx:id="vendorColumn" text="Vendor" prefWidth="180">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="vendorName"/>
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn fx:id="amountColumn" text="Amount" prefWidth="120">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="amount"/>
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn fx:id="bankColumn" text="Bank Account" prefWidth="180">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="bankAccount"/>
+                    </cellValueFactory>
+                </TableColumn>
+
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <VBox spacing="10" style="-fx-padding: 10;">
+            <Button fx:id="disburseButton" text="Disburse Payment" prefWidth="200" />
+            <Label fx:id="statusLabel" style="-fx-font-size: 14; -fx-text-fill: green;" />
+        </VBox>
+    </bottom>
+
+</BorderPane>

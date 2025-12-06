@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.weddingeventmanagment.BudgetOverviewController">
+
+    <top>
+        <VBox spacing="10" style="-fx-padding: 10;">
+            <ComboBox fx:id="eventIdCombo" promptText="Select Event ID" />
+        </VBox>
+    </top>
+
+    <center>
+        <PieChart fx:id="budgetPieChart" title="Budget Breakdown" />
+    </center>
+
+    <bottom>
+        <TableView fx:id="allocationTable" prefHeight="200">
+            <columns>
+                <TableColumn fx:id="categoryColumn" text="Category"
+                             prefWidth="150">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="category"/>
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn fx:id="amountColumn" text="Amount"
+                             prefWidth="150">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="amount"/>
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </bottom>
+
+</BorderPane>

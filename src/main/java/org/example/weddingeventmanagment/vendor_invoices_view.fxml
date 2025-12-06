@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.weddingeventmanagment.VendorInvoicesController">
+
+    <top>
+        <Label text="Vendor Invoices Verification Dashboard"
+               style="-fx-font-size: 20px; -fx-padding: 10;" />
+    </top>
+
+    <center>
+        <TableView fx:id="invoiceTable" prefHeight="400" prefWidth="600">
+            <columns>
+                <TableColumn fx:id="colId" text="Invoice ID" prefWidth="120"/>
+                <TableColumn fx:id="colVendor" text="Vendor" prefWidth="200"/>
+                <TableColumn fx:id="colAmount" text="Amount" prefWidth="150"/>
+                <TableColumn fx:id="colStatus" text="Status" prefWidth="150"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <VBox spacing="10">
+            <HBox spacing="10">
+                <Button text="Verify Invoice" fx:id="btnVerify" />
+                <Button text="Approve" fx:id="btnApprove" />
+                <Button text="Reject" fx:id="btnReject" />
+            </HBox>
+
+            <Label text="Verification Summary:" style="-fx-font-weight: bold;" />
+            <Label fx:id="summaryLabel" text="No invoice selected."/>
+        </VBox>
+    </bottom>
+
+</BorderPane>
