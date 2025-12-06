@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.midterm_2320481_8.weeding_event_management.samanta.client.ClientDAshbordController">
+   <children>
+      <Label layoutX="163.0" prefHeight="32.0" prefWidth="300.0" text="Client Dashboard">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Button layoutX="14.0" layoutY="56.0" mnemonicParsing="false" onAction="#bookandwedddinfgbutton" prefHeight="49.0" prefWidth="204.0" text="Book and Wedding Venue" />
+      <Button layoutX="14.0" layoutY="126.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="204.0" text="Button" />
+      <Button layoutX="14.0" layoutY="192.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="204.0" text="Button" />
+      <Button layoutX="14.0" layoutY="262.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="204.0" text="Button" />
+      <Button layoutX="300.0" layoutY="48.0" mnemonicParsing="false" onAction="#weddingthemebutton" prefHeight="49.0" prefWidth="204.0" text="Wedding Theme and Design" />
+      <Button layoutX="300.0" layoutY="118.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="204.0" text="Button" />
+      <Button layoutX="300.0" layoutY="184.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="204.0" text="Button" />
+      <Button layoutX="300.0" layoutY="254.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="204.0" text="Button" />
+   </children>
+</AnchorPane>

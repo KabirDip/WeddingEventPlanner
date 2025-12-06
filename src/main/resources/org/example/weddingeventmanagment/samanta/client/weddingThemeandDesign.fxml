@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="554.0" prefWidth="864.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.midterm_2320481_8.weeding_event_management.samanta.client.WeddingThemeandDesignController">
+   <children>
+      <ComboBox fx:id="preferredthemeComboBox" layoutX="232.0" layoutY="75.0" prefWidth="150.0" />
+      <Label layoutX="123.0" layoutY="24.0" prefHeight="38.0" prefWidth="266.0" text="Wedding Theme and Design">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="79.0" prefHeight="18.0" prefWidth="200.0" text="Input preferred theme style" />
+      <Label layoutX="23.0" layoutY="125.0" prefHeight="18.0" prefWidth="121.0" text="Enter custom notes" />
+      <TextField fx:id="customnotesTextField" layoutX="149.0" layoutY="122.0" />
+      <Label layoutX="14.0" layoutY="181.0" prefHeight="18.0" prefWidth="121.0" text="Input color preference" />
+      <ComboBox fx:id="colorpreferenceComboBox" layoutX="169.0" layoutY="177.0" prefWidth="150.0" />
+      <Button layoutX="446.0" layoutY="199.0" mnemonicParsing="false" onAction="#finalthemedesignButton" text="Approve final theme design" />
+      <TableView fx:id="weddingThemeandDesignTableView" layoutX="23.0" layoutY="262.0" prefHeight="230.0" prefWidth="552.0">
+        <columns>
+          <TableColumn fx:id="preferredthemeColumn" prefWidth="164.0" text="Input preferred theme style" />
+          <TableColumn fx:id="C" prefWidth="184.0" text="Enter custom notes" />
+            <TableColumn fx:id="colorpreferenceColumn" prefWidth="203.20001220703125" text="Input color preference" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
